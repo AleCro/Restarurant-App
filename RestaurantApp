@@ -1,0 +1,43 @@
+//Name: Alejandro Coro Lopez
+//Course: 202530-COP-3330C-31776
+//Date: 5/11/2025
+//Program Objective: Create two restaurant classes (McDonald's and BlazePizza) with unique attributes and methods,
+//instantiate them, print their information, update some data, and print again to reflect changes.
+//Inputs: Non changeable inputs
+//Outputs: Prints restaurant details to console
+
+public class RestaurantApp {
+    public static void main(String[] args) {
+        //Create McDonalds object
+        McDonalds mac = new McDonalds(1200, true, "Buy 1 Big Mac, Get 1 Free", true, 350, 600, 250);
+        // Create BlazePizza object
+        BlazePizza blaze = new BlazePizza(800, "Thin Crust", 750.0, "Cinnamon Pizza", 300, 350, 150);
+
+        //Prints info for both restaurants
+        mac.printInfo();
+
+        blaze.printInfo();
+
+        //Simulate data update
+        System.out.println("\nUpdating data...\n");
+
+        //Update one field each
+        mac.setTodaysDeal("Free Fries Friday");
+        mac.setDriveThruOrders(1300);
+        mac.setStudentCustomers(400);
+        mac.setFamilyCustomers(650);
+
+        blaze.setCrustType("Stuffed Crust");
+        blaze.setOvenTemperature(775.0);
+        blaze.setNewMenuItem("Large Build Your Own");
+        blaze.setStudentClients(320);
+        blaze.setFamilyClients(360);
+        blaze.setProfessionalClients(170);
+        blaze.setOrdersToday(850);
+
+        //Prints updated info for both restaurants
+        mac.printInfo();
+
+        blaze.printInfo();
+    }
+}
