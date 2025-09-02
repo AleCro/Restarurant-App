@@ -1,0 +1,103 @@
+//BlazePizza.java
+//This class shows the Blaze Pizza food chain and its specific features
+
+public class BlazePizza {
+
+    //Fields specific to Blaze Pizza
+    private int ordersToday;
+    private String crustType;
+    private double ovenTemperature;
+    private String newMenuItem;
+
+    //Breakdown of client types
+    private int studentClients;
+    private int familyClients;
+    private int professionalClients;
+
+    //Constructor
+    public BlazePizza(int ordersToday, String crustType, double ovenTemperature, String newMenuItem,
+                      int studentClients, int familyClients, int professionalClients) {
+        this.ordersToday = ordersToday;
+        this.crustType = crustType;
+        this.ovenTemperature = ovenTemperature;
+        this.newMenuItem = newMenuItem;
+        this.studentClients = studentClients;
+        this.familyClients = familyClients;
+        this.professionalClients = professionalClients;
+    }
+
+    //Overloaded constructor
+    public BlazePizza() {
+        this.ordersToday = 0;
+        this.crustType = null;
+        this.ovenTemperature = 0.0;
+        this.newMenuItem = null;
+        this.studentClients = 0;
+        this.familyClients = 0;
+        this.professionalClients = 0;
+    }
+
+    //Getters and Setters
+    public int getOrdersToday() {
+        return ordersToday;
+    }
+    public void setOrdersToday(int ordersToday) {
+        this.ordersToday = ordersToday;
+    }
+    public String getCrustType() {
+        return crustType;
+    }
+    public void setCrustType(String crustType) {
+        this.crustType = crustType;
+    }
+    public double getOvenTemperature() {
+        return ovenTemperature;
+    }
+    public void setOvenTemperature(double ovenTemperature) {
+        this.ovenTemperature = ovenTemperature;
+    }
+    public String getNewMenuItem() {
+        return newMenuItem;
+    }
+    public void setNewMenuItem(String newMenuItem) {
+        this.newMenuItem = newMenuItem;
+    }
+    public int getStudentClients() {
+        return studentClients;
+    }
+    public void setStudentClients(int studentClients) {
+        this.studentClients = studentClients;
+    }
+    public int getFamilyClients() {
+        return familyClients;
+    }
+    public void setFamilyClients(int familyClients) {
+        this.familyClients = familyClients;
+    }
+    public int getProfessionalClients() {
+        return professionalClients;
+    }
+    public void setProfessionalClients(int professionalClients) {
+        this.professionalClients = professionalClients;
+    }
+    //Custom method to print Blaze Pizza goodbye message
+    public void goodbyeMessage() {
+        System.out.println("Thank you, come again - from Blaze Pizza!");
+    }
+
+    //Prints method to display all information
+    public void printInfo() {
+        System.out.println("----- Blaze Pizza Info -----");
+        System.out.println("Build Your Own Orders Today: " + ordersToday);
+        System.out.println("Crust Type: " + crustType);
+        System.out.println("Oven Temperature: " + ovenTemperature + " degrees");
+        System.out.println("New to the menu: " + newMenuItem);
+        System.out.println("Client Breakdown:");
+        System.out.println("- Students: " + studentClients);
+        System.out.println("- Families: " + familyClients);
+        System.out.println("- Professionals: " + professionalClients);
+        System.out.println("----------------------------\n");
+        //Add goodbye message at the end
+        goodbyeMessage();
+    }
+}
