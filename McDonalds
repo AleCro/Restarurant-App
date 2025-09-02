@@ -1,0 +1,103 @@
+//McDonalds.java
+//This class show the McDonald food chain and its specific features.
+public class McDonalds {
+
+    //Fields specific to McDonald
+    private int driveThruOrders;
+    private boolean hasPlayPlace;
+    private String todaysDeal;
+    private boolean iceCreamMachineWorking;
+
+    //Breakdown of client types
+    private int studentCustomers;
+    private int familyCustomers;
+    private int professionalCustomers;
+
+    //Constructor
+    public McDonalds(int driveThruOrders, boolean hasPlayPlace, String todaysDeal,
+                     boolean iceCreamMachineWorking, int studentCustomers,
+                     int familyCustomers, int professionalCustomers) {
+        this.driveThruOrders = driveThruOrders;
+        this.hasPlayPlace = hasPlayPlace;
+        this.todaysDeal = todaysDeal;
+        this.iceCreamMachineWorking = iceCreamMachineWorking;
+        this.studentCustomers = studentCustomers;
+        this.familyCustomers = familyCustomers;
+        this.professionalCustomers = professionalCustomers;
+    }
+
+    //Overloaded constructor
+    public McDonalds() {
+        this.driveThruOrders = 0;
+        this.hasPlayPlace = false;
+        this.todaysDeal = null;
+        this.iceCreamMachineWorking = false;
+        this.studentCustomers = 0;
+        this.familyCustomers = 0;
+        this.professionalCustomers = 0;
+    }
+
+    //Getters and Setters
+    public int getDriveThruOrders() {
+        return driveThruOrders;
+    }
+    public void setDriveThruOrders(int driveThruOrders) {
+        this.driveThruOrders = driveThruOrders;
+    }
+    public boolean getHasPlayPlace() {
+        return hasPlayPlace;
+    }
+    public void setHasPlayPlace(boolean hasPlayPlace) {
+        this.hasPlayPlace = hasPlayPlace;
+    }
+    public String getTodaysDeal() {
+        return todaysDeal;
+    }
+    public void setTodaysDeal(String todaysDeal) {
+        this.todaysDeal = todaysDeal;
+    }
+    public boolean isIceCreamMachineWorking() {
+        return iceCreamMachineWorking;
+    }
+    public void setIceCreamMachineWorking(boolean iceCreamMachineWorking) {
+        this.iceCreamMachineWorking = iceCreamMachineWorking;
+    }
+    public int getStudentCustomers() {
+        return studentCustomers;
+    }
+    public void setStudentCustomers(int studentCustomers) {
+        this.studentCustomers = studentCustomers;
+    }
+    public int getFamilyCustomers() {
+        return familyCustomers;
+    }
+    public void setFamilyCustomers(int familyCustomers) {
+        this.familyCustomers = familyCustomers;
+    }
+    public int getProfessionalCustomers() {
+        return professionalCustomers;
+    }
+    public void setProfessionalCustomers(int professionalCustomers) {
+        this.professionalCustomers = professionalCustomers;
+    }
+    //Custom method to print McDonald goodbye message
+    public void goodbyeMessage() {
+        System.out.println("Thank you, come again - from McDonald's!");
+    }
+
+    //Prints method to display all information
+    public void printInfo() {
+        System.out.println("----- McDonald's Info -----");
+        System.out.println("Drive-Thru Orders Today: " + driveThruOrders);
+        System.out.println("Has Play Place: " + (hasPlayPlace ? "Yes" : "No"));
+        System.out.println("Today's Deal: " + todaysDeal);
+        System.out.println("Ice Cream Machine Working: " + (iceCreamMachineWorking ? "Yes" : "No"));
+        System.out.println("Client Breakdown:");
+        System.out.println("- Students: " + studentCustomers);
+        System.out.println("- Families: " + familyCustomers);
+        System.out.println("- Professionals: " + professionalCustomers);
+        System.out.println("----------------------------\n");
+        // Add goodbye message at the end
+        goodbyeMessage();
+    }
+}
